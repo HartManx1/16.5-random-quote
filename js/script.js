@@ -1,10 +1,12 @@
 'use strict'
 
 var tweetLink = "https://twitter.com/intent/tweet?text=";
-var quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+var quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&a=";
+var prefix = "https://cors-anywhere.herokuapp.com/";
+
 
 function getQuote() {
-	fetch(quoteUrl, {cache: "no-store"})
+	fetch(prefix + quoteUrl + Date.now(), { cache: "no-store" })
 		.then(function(resp) {
 			return resp.json();
 		})
@@ -42,4 +44,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-var response = JSON.parse(xhr.response);
