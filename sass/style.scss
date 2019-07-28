@@ -16,7 +16,8 @@ h1 {
   padding-bottom: 50px;
 }
 
-.trigger,a {
+.trigger,
+a {
   display: block;
   margin: 0 auto 30px;
   border: 1px solid #ffffff;
@@ -29,10 +30,10 @@ h1 {
 }
 
 .trigger:hover {
-    border: 2px solid #ffffff;
+  border: 2px solid #ffffff;
 }
 
 a {
-    width: 13vw;
-    text-decoration: none;
+  width: 13vw;
+  text-decoration: none;
 }
